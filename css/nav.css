@@ -1,0 +1,144 @@
+/* ------------------------
+	Main Styles
+-------------------------	*/
+
+.main-header,
+.nav {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+.main-header {
+	padding: 2em;
+}
+
+.site-logo {
+	width: 80px;
+	align-self: center;
+}
+
+.nav {
+	margin-top: 1.5em;
+}
+
+.nav a {
+	display: block;
+	color: #fff;
+	font-size: 1.125em;
+	font-weight: 300;
+	text-align: center;
+	padding: .4em;
+	border-bottom: 1px solid #ebecec;
+	font-family: 'Anton', sans-serif;
+}
+
+.nav a:hover {
+	color: #f6d023;
+}
+
+.active{
+  display:block;
+  transition:all ease 0.3s;
+  }
+
+  .hamburger{
+	  background:none;
+	  position:absolute;
+	  top:0;
+	  right:0;
+	  line-height:45px;
+	  padding:5px 15px 0px 15px;
+	  color:#fff;
+	  border:0;
+	  font-size:1.4em;
+	  font-weight:bold;
+	  cursor:pointer;
+	  outline:none;
+	  z-index:10000000000000;
+	}
+
+.cross{
+	  background:none;
+	  position:absolute;
+	  top:0px;
+	  right:0;
+	  padding:13px 15px 0px 15px;
+	  color:#fff;
+	  border:0;
+	  font-size:3em;
+	  line-height:65px;
+	  font-weight:bold;
+	  cursor:pointer;
+	  outline:none;
+	  z-index:10000000000000;
+	  display:none;
+	}
+
+.menu {
+	z-index:1000000; 
+	width:100%; 
+	text-align:center;
+	display:none;
+}
+
+/* ------------------------
+	Media Queries
+-------------------------	*/
+
+@media (min-width: 769px) {
+
+	.row {
+	display: flex;
+	}
+
+	.col {
+		flex:1;
+	}
+	.main-header {
+		height: 200px;
+		flex-direction: row;
+		justify-content:space-between;
+
+	}
+	.site-logo {
+		margin-right: auto;
+		width: 130px;
+	}
+	.nav {
+		flex-direction: row;
+		margin-top: 3em;
+		margin-bottom: 20px;
+
+	}
+	.nav a {
+		border-bottom-color: transparent;
+	}
+
+.hamburger, 
+.cross {
+    display: none !important; /* always hide the hamburger menu at non-mobile sizes. */
+  }
+  
+  .menu {
+    display: flex !important; /* never hide the menu on non-mobile sizes. */
+    width: auto;
+
+  }
+
+}
+
+
+
+@media (min-width: 1025px) {
+
+	.site-logo {
+		width: 140px;
+	}
+	.container {
+	width: 70%;
+	margin: 40px auto;
+}
+}
+
